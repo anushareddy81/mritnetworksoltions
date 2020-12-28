@@ -1,0 +1,307 @@
+/*production css*/
+.ptb-80 {
+    padding: 30px 0;
+}
+.about-section{
+    padding-bottom:0px;
+}
+
+.gray-bg {
+    background: #f7fbfe none repeat scroll 0 0;
+}
+.gray-bg {
+   
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+}
+.our-services-bg{
+    background-image: url('../images/servicebanner.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%; 
+    padding: 35px 0px 35px 0px;
+}
+
+.main-heading-content {
+    margin-bottom: 12px;
+    position: relative;
+    
+}
+.text-center {
+    text-align: center;
+}
+.main-heading-content > h2 {
+    font-size: 34px;
+    font-weight: 500;
+    letter-spacing: 0px;
+    margin-bottom: 35px;
+    position: relative;
+    text-transform: uppercase;
+}
+.main-heading-content > h2::before {
+    background: #45abe0  none repeat scroll 0 0;
+    bottom: -25px;
+    content: "";
+    height: 2px;
+    left: 0;
+    margin: 0 auto;
+    position: absolute;
+    right: 0;
+    width: 70px;
+}
+.main-heading-content>h2 span {
+    color: #024569 ;
+}
+.main-heading-content > h2::after {
+    background: #45abe0  none repeat scroll 0 0;
+    bottom: -17px;
+    content: "";
+    height: 2px;
+    left: 0;
+    margin: 0 auto;
+    position: absolute;
+    right: 0;
+    width: 120px;
+}
+.use-z-index {
+    position: relative;
+    z-index: 999;
+}
+.feature-item {
+    background: #fff none repeat scroll 0 0;
+    box-shadow: 0 8px 48px 0 rgba(0, 0, 0, 0.08);
+    outline: 1px solid #fff;
+    padding: 50px 30px;
+    transition: all 0.4s ease-in-out 0s;
+	    margin-bottom: 0px;
+}
+.feature-item:hover {
+    background: #024569 ;
+    outline-offset: -18px;
+}
+.feature-icon {
+    margin-bottom: 20px;
+}
+.feature-icon > img {
+    width: 60px;
+}
+.feature-item.feature-p {
+    background: #024569  none repeat scroll 0 0;
+    outline: 1px solid #fff;
+    outline-offset: -18px;
+}
+.feature-p {
+	color:#fff;
+}
+.feature-p h3{
+	color:#fff;
+}
+.feature-item {
+    background: #fff none repeat scroll 0 0;
+    box-shadow: 0 8px 48px 0 rgba(0, 0, 0, 0.08);
+    outline: 1px solid #fff;
+    padding: 50px 30px;
+    transition: all 0.4s ease-in-out 0s;
+}
+.feature-item:hover h3 {
+	color:#fff;
+}
+.feature-item:hover p {
+	color:#fff;
+}
+/* circle box design css*/
+.service-item {
+    background: #fff none repeat scroll 0 0;
+    border-radius: 50%;
+    box-shadow: 0 8px 48px 0 rgba(0, 0, 0, 0.08);
+    height: 280px;
+    margin: 0 auto;
+    padding: 35px 25px;
+    position: relative;
+    width: 280px;
+    z-index: 1;
+	
+	 transition: all 0.4s ease-in-out 0s;
+}
+.service-item:hover {
+    background: #024569 ;
+    outline-offset: -18px;
+	border-radius: 50%;
+	
+}
+.service-icon > img {
+    /* margin-bottom: 25px; */
+    /* margin-top: 15px; */
+    width: 60px;
+}
+.service-icon svg {
+	font-size: 50px;
+    color: #024569;
+}
+.service-icon i {
+	font-size: 17px;
+    color: #45abe0;
+}
+.service-item:hover svg{
+	color:#fff;
+}
+.service-item > h3 {
+    font-size: 20px;
+	margin-top: 15px;
+	color:#024569 ;
+	transition:all 0.5s ease;
+}
+.service-item > p {
+	transition:all 0.5s ease;
+	color:#222;
+    font-size:13px;
+}
+.service-item:hover h3 {
+	color:#fff;
+}
+.service-item:hover p {
+	color:#fff;
+}
+a:hover{
+     text-decoration: none;
+}
+/*--------------------------------
+ end our products
+---------------------------------*/
+/*-------------------------------------
+              what we do
+--------------------------------------*/
+.bg-color {
+    background: #f9f9f9;
+}
+.area-padding {
+    padding: 28px 0px 0px 0px;
+}
+.section-headline {
+    margin-bottom: 15px;
+    position: relative;
+}
+.section-headline h3 {
+    font-size: 40px;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+.load-more-btn, .section-headline h3, .topbar-left ul li {
+    display: inline-block;
+}
+.color {
+    color: #024569;
+    font-weight: 700;
+}
+.section-headline::after {
+    bottom: -20px;
+    left: 0;
+    margin: 0 auto;
+}
+.well-services {
+    box-shadow: 0 5px 25px rgba(0,0,0,.1);
+    z-index: 1;
+    background: #fff;
+}
+.services-img {
+    text-align: center;
+}
+.main-services, .services-img {
+    position: relative;
+    overflow: hidden;
+}
+.top-icon {
+    display: none;
+    position: absolute;
+    right: 15px;
+    font-size: 44px;
+    bottom: 0;
+    background: #006992;
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    color: #fff;
+    border-radius: 5px 5px 0 0;
+    z-index: 9;
+}
+.image-layer {
+    position: absolute;
+    left: 0;
+    top: 100%;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,44,87,.95);
+    z-index: 1;
+    opacity: 1;
+    transition: .4s;
+    padding: 30px 20px;
+}
+.image-layer a {
+    display: block;
+    text-align: left;
+    position: relative;
+    margin-bottom: 10px;
+    color: #fff;
+    font-size: 14px;
+}
+.image-layer a i {
+    border-radius: 50%;
+    background: 0 0;
+    font-size: 20px;
+    opacity: .9;
+    line-height: 30px;
+    margin-right: 15px;
+}
+.main-services {
+    display: block;
+    padding: 20px;
+    z-index: 1;
+}
+.main-services, .services-img {
+    position: relative;
+    overflow: hidden;
+}
+.service-content h4 {
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 0;
+    padding: 0 0 10px;
+    text-transform: uppercase;
+}
+.service-btn {
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #444;
+    position: relative;
+    font-size: 13px;
+    z-index: 2;
+}
+.image-1 {
+    max-width: 100%;
+    height:270px;
+}
+.image-2{
+   width: 100%;
+    height: 270px; 
+}
+.image-3{
+    width: 100%;
+    height: 270px;  
+}
+    .what-we-do {
+    font-size: 16px;
+    text-align: justify;
+    line-height: 32px;
+        margin-top: 53px 0px 28px 0px;
+    text-indent: 20%;
+    margin-bottom:31px;
+    /* font-weight: 600; */
+}
+
+
+/*------------------------------------
+           end what we do
+-------------------------------------*/

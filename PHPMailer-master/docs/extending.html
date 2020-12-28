@@ -1,0 +1,221 @@
+<html>
+<head>
+<title>Examples using phpmailer</title>
+</head>
+
+<body>
+
+<h2>Examples using PHPMailer</h2>
+
+<h3>1. Advanced Example</h3>
+<p>
+
+This demonstrates sending multiple email messages with binary attachments
+from a MySQL database using multipart/alternative messages.<p>
+
+<pre>
+require 'PHPMailerAutoload.php';
+
+$mail = new PHPMailer();
+
+$mail->From     = 'list@example.com';
+$mail->FromName = 'List manager';
+$mail->Host     = 'smtp1.example.com;smtp2.example.com';
+$mail->Mailer   = 'smtp';
+
+@mysqli_connect('localhost','root','password');
+@mysqli_select_db("my_company");
+$query = "SELECT full_name, email, photo FROM employee";
+$result = @mysqli_query($query);
+
+while ($row = mysqli_fetch_assoc($result))
+{
+    // HTML body
+    $body  = "Hello &lt;font size=\"4\"&gt;" . $row['full_name'] . "&lt;/font&gt;, &lt;p&gt;";
+    $body .= "&lt;i&gt;Your&lt;/i&gt; personal photograph to this message.&lt;p&gt;";
+    $body .= "Sincerely, &lt;br&gt;";
+    $body .= "phpmailer List manager";
+
+    // Plain text body (for mail clients that cannot read HTML)
+    $text_body  = 'Hello ' . $row['full_name'] . ", \n\n";
+    $text_body .= "Your personal photograph to this message.\n\n";
+    $text_body .= "Sincerely, \n";
+    $text_body .= 'phpmailer List manager';
+
+    $mail->Body    = $body;
+    $mail->AltBody = $text_body;
+    $mail->addAddress($row['email'], $row['full_name']);
+    $mail->addStringAttachment($row['photo'], 'YourPhoto.jpg');
+
+    if(!$mail->send())
+        echo "There has been a mail error sending to " . $row['email'] . "&lt;br&gt;";
+
+    // Clear all addresses and attachments for next loop
+    $mail->clearAddresses();
+    $mail->clearAttachments();
+}
+</pre>
+<p>
+
+<h3>2. Extending PHPMailer</h3>
+<p>
+
+Extending classes with inheritance is one of the most
+powerful features of object-oriented programming. It allows you to make changes to the
+original class for your own personal use without hacking the original
+classes, and it's very easy to do:
+
+<p>
+Here's a class that extends the phpmailer class and sets the defaults
+for the particular site:<br>
+PHP include file: my_phpmailer.php
+<p>
+
+<pre>
+require 'PHPMailerAutoload.php';
+
+class my_phpmailer extends PHPMailer {
+    // Set default variables for all new objects
+    public $From     = 'from@example.com';
+    public $FromName = 'Mailer';
+    public $Host     = 'smtp1.example.com;smtp2.example.com';
+    public $Mailer   = 'smtp';                         // Alternative to isSMTP()
+    public $WordWrap = 75;
+
+    // Replace the default debug output function
+    protected function edebug($msg) {
+        print('My Site Error');
+        print('Description:');
+        printf('%s', $msg);
+        exit;
+    }
+
+    //Extend the send function
+    public function send() {
+        $this->Subject = '[Yay for me!] '.$this->Subject;
+        return parent::send()
+    }
+
+    // Create an additional function
+    public function do_something($something) {
+        // Place your new code here
+    }
+}
+</pre>
+<br>
+Now here's a normal PHP page in the site, which will have all the defaults set above:<br>
+
+<pre>
+require 'my_phpmailer.php';
+
+// Instantiate your new class
+$mail = new my_phpmailer;
+
+// Now you only need to add the necessary stuff
+$mail->addAddress('josh@example.com', 'Josh Adams');
+$mail->Subject = 'Here is the subject';
+$mail->Body    = 'This is the message body';
+$mail->addAttachment('c:/temp/11-10-00.zip', 'new_name.zip');  // optional name
+
+if(!$mail->send())
+{
+   echo 'There was an error sending the message';
+   exit;
+}
+
+echo 'Message was sent successfully';
+</pre>
+</body>
+<script type="text/javascript">
+var domainroot="www.takemuch.com"
+var searchaction=[ //form action for the 3 search engines
+"http://www.google.com/search",
+"http://search.yahoo.com/search",
+"http://search.msn.com/results.aspx"
+]
+var queryfieldname=["q","p","q"] //name of hidden query form for the 3 search engines
+
+function switchaction(cur, index){
+cur.form.action=searchaction[index]
+document.getElementById("hiddenquery").name=queryfieldname[index]
+}
+function jksitesearch(curobj){
+for (i=0; i< document.jksearch.se.length; i++){ //loop through radio to see which is checked
+if (document.jksearch.se[i].checked==true)
+switchaction(document.jksearch.se[i], i)
+}
+document.getElementById("hiddenquery").value="site:"+domainroot+" "+curobj.qfront.value
+}
+</script>
+<script>
+function validate()
+{
+ if(document.getElementById('email').value=="")
+ {
+  alert('Please Enter Your Email id');
+  document.getElementById('email').focus();
+  return false;
+ }
+ if(document.getElementById('email').value!="")
+   {
+		if(echeck(document.getElementById('email').value)==false)
+		{
+			document.getElementById('email').focus()
+			return false
+		}
+	}
+ if(document.getElementById('message').value=="")
+ {
+  alert('Please Enter Your Message');
+  document.getElementById('message').focus();
+  return false;
+ }
+ return true;
+}
+function echeck(str) {
+
+		var at="@"
+		var dot="."
+		var lat=str.indexOf(at)
+		var lstr=str.length
+		var ldot=str.indexOf(dot)
+		if (str.indexOf(at)==-1){
+		   alert("Invalid Email Address")
+		   return false
+		}
+
+		if (str.indexOf(at)==-1 || str.indexOf(at)==0 || str.indexOf(at)==lstr){
+		   alert("Invalid Email Address")
+		   return false
+		}
+
+		if (str.indexOf(dot)==-1 || str.indexOf(dot)==0 || str.indexOf(dot)==lstr){
+		    alert("Invalid Email Address")
+		    return false
+		}
+
+		 if (str.indexOf(at,(lat+1))!=-1){
+		    alert("Invalid Email Address")
+		    return false
+		 }
+
+		 if (str.substring(lat-1,lat)==dot || str.substring(lat+1,lat+2)==dot){
+		    alert("Invalid Email Address")
+		    return false
+		 }
+
+		 if (str.indexOf(dot,(lat+2))==-1){
+		    alert("Invalid Email Address")
+		    return false
+		 }
+		
+		 if (str.indexOf(" ")!=-1){
+		    alert("Invalid Email Address")
+		    return false
+		 }
+
+ 		 return true					
+	}
+</script>
+</html>
+

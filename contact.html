@@ -1,0 +1,452 @@
+<?php
+error_reporting(0);
+if(isset($_POST['networkingsubmit']))
+{
+	include('iqry_data.php');
+}
+?>
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+<head>
+    <!-- ======= Meta Tags ======= -->
+    <meta charset="UTF-8">
+    <meta name="description" content="GREHOST - Multi-purpose Responsive Hosting Template">
+    <meta name="keywords" content="GREHOST, Bootstrap, html5, css3, hosting, domain, Template, Business ">
+    <meta name="author" content="HananHamdy">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <!-- ======= Title ======= -->
+    <title>MRIT Network Soltions</title>
+    <!-- ======= Favicon Icon ======= -->
+    <link rel="icon" href="images\favi mr.png">
+    <!-- ======= Fonts ======= -->
+    <link href="../../../../code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet" type="text/css">
+    <!-- ======= Stylesheets ======= -->
+    <link rel="Stylesheet" href="css/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="css/slick/slick.css">
+    <link rel="stylesheet" href="css/slick/slick-theme.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+      <link rel="stylesheet" href="css/servicecircle.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/styles-responsive.css">
+</head>
+
+<body class="no-scroll" data-spy="scroll" data-target=".navbar" data-offset="250">
+
+    <!-- ======= Preloader ======= -->
+    <div class="preloader">
+        <ul class="preloader">
+            <li class="one"></li>
+            <li class="two"></li>
+            <li class="three"></li>
+            <li class="four"></li>
+            <li class="five"></li>
+        </ul>
+    </div>
+
+     <!-- ======= Top Header ======= -->
+   <!-- <div class="top-header">
+        <div class="container">
+            <ul class="list-inline hidden-xs mini-contact">
+                <li><a role="button">+(000)111-222-333</a></li>
+                <li><a role="button">someone@example.com</a></li>
+            </ul>
+            <ul class="list-inline menu">
+                <li class="m-mob-0">
+                    <a href="http://hananhamdy.com/projects/grehost/ar-layout/index.html">AR</a>
+                </li>
+                <li>
+                    <a role="button">Account<i class="icon ion-arrow-down-b"></i></a>
+                    <ul class="list-unstyled dropdown">
+                        <li><a href="login-register.html">Sign in</a></li>
+                        <li><a href="login-register.html">Sign up</a></li>
+                    </ul>
+                </li>
+                <li><a href="http://hananhamdy.com/projects/clients/" class="main-color">WHMCS Demo</a></li>
+            </ul>
+        </div>
+    </div>-->
+    <!-- ======= Header ======= -->
+      <!-- ======= Header ======= -->
+    <header class="navbar" data-spy="affix" data-offset-top="197">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <img class="mrit-logo" src="images\MRIT-logo.svg" alt="Brand" class="img-responsive">
+            </a>
+            <!-- ======= Mobile Menu ======= -->
+            <a role="button" class="mobile-menu-icon visible-xs visible-sm"><i class="icon ion-navicon-round"></i></a>
+            <div class="mobile-menu visible-sm visible-xs">
+                <ul class="list-unstyled menu">
+                    <li class=" nav-item ">
+                        <a href="index.html" >Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="about.html">About</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a href="features.html">Features</a>
+                        
+                            <ul class="list-unstyled dropdown">
+                                <li><a href="server.html">Server Administration</a></li>
+                                <li><a href="networkservices.html">Network Services</a></li>
+                               <!-- <li><a href="firewall.html"></a></li> -->
+                                <li><a href="networksecurity.html">Network Security</a></li>
+                                <li><a href="surveillance.html">Surveillances</a></li>
+                              <!--  <li><a href="NetworkSecurity.html">Access Control Systems</a></li>-->
+                                <li><a href="itsupport.html">IT Support </a></li>
+                                <li><a href="uninterrupted.html">UPS</a></li>
+                            </ul>
+                        
+                    </li>
+                    <li class="nav-item">
+                        <a href="hosting-dedicated.html">Training</a>
+                    </li>
+                    <li class="nav-item">
+                           <a href="portfolio.html">Portfolio</a>
+                    </li>
+                <!--    <li class="nav-item">
+                       <a href="blog.html">Blog</a></li>
+                    </li>-->
+                    
+                    <li class="active nav-item">
+                        <a href="contact.html" class="no-border">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- ======= Main Menu ======= -->
+                        <nav class="navbar hidden-xs hidden-sm">
+                <ul class="list-inline list-unstyled menu">
+                    <li class="nav-item">
+                        <a href="index.html">Home</a>
+                    </li>
+                     <li class="nav-item">
+                        <a href="about.html">About</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a href="features.html">Features</a>
+                        <ul class="list-unstyled dropdown">
+                            <li><a href="server.html">Server Administration</a></li>
+                            <li><a href="networkservices.html">Network Services</a></li>
+                           <!-- <li><a href="firewall.html"></a></li> -->
+                            <li><a href="networksecurity.html">Network  Security</a></li>
+                            <li><a href="surveillance.html">Surveillances</a></li>
+                          <!--  <li><a href="NetworkSecurity.html">Access Control Systems</a></li>-->
+                            <li><a href="itsupport.html">IT Support </a></li>
+                            <li><a href="uninterrupted.html">UPS</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="hosting-dedicated.html">Training</a>
+                    </li>
+                    <li class="nav-item">
+
+                           <a href="portfolio.html">Portfolio</a>
+                       
+                    <!--<li class="nav-item">
+                           <a href="blog.html">Blog</a>
+                    </li>-->
+                    <li class="nav-item active">
+                        <a href="contact.html" class="main-color" >Contact</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <!-- ======= Slider ======= -->
+
+        <!-- ======= Contact Page ======= -->
+    <div class="contact page">
+        <!-- ======= Banner ======= -->
+        <section class="page-banner second-bg">
+            <div class="container">
+                <div class="row">
+                    <h3><b>Contact</b></h3>
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                        <li class="breadcrumb-item active">Contact</li>
+                    </ol>
+                </div>
+            </div>
+        </section>
+        <!-- ======= Contact Info ======= -->
+        <section class="contact-info second-bg">
+            <div class="container">
+                <div class="title main-heading-content">
+                    <h2>Contact <span>with us</span></h2>
+                    <p class="p-l">
+
+                     The best way to reach us would be to fill form below and we will get back to you.
+                    </p>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6 m-b-mob-30">
+                        <ul class="list-unstyled info-details">
+                            <li class="block">
+                                <img src="images/contact/placeholder.png" alt="" class="img-responsive">
+                                <div class="text">
+                                    <p class="p-l main-color4"><b>Location</b></p>
+                                    <p>302,RR Towers,Madhapur,Hyderabad,India-500081</p>
+                                </div>
+                            </li>
+                            <li class="block">
+                                <img src="images/contact/mobile-phone.png" alt="" class="img-responsive">
+                                <div class="text">
+                                    <p class="p-l main-color4"><b>Phone</b></p>
+                                    
+                                    <p><b>Main Office:</b>9573577022</p>
+                                <!---  <p><b>Tech Department:</b>+02 123 4567 890</p>-->
+                                </div>
+                            </li>
+                            <li class="block no-border m-b-mob-0">
+                                <img src="images/contact/email.png" alt="" class="img-responsive">
+                                <div class="text">
+                                    <p class="p-l main-color4"><b>Email</b></p>
+                                    <p><b>Support:</b>support@mritnetworksolutions.com</p>
+                                    <p><b>Clients:</b>mritnetworksolutions@gmail.com.com</p>
+                                 
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-6">
+                        <form class="white-form" id="contact-form" method="post" onsubmit="return validate_contact()" >
+                            <div class="form-group">
+                                 <label for="name">Name *</label> <span style="color:red" id="name_error"><?php echo $name_err; ?></span>
+                                <input type="text" class="form-control" id="name" name="name" value="<?php echo $name;?>"  placeholder="Name" data-error="Name is required.">
+                            <div class="help-block with-errors"></div>
+                            </div>
+                            <div class="form-group">
+                                      <label for="email">Email *</label> <span style="color:red" id="email_error"><?php echo $email_err; ?></span>
+                                <input type="email" id="email" name="email" class="form-control" value="<?php echo $email;?>" placeholder="Email" data-error="Email is required.">
+                            <div class="help-block with-errors"></div>
+                            </div>
+                            <div class="form-group">
+                                <label for="subject">Subject *</label> <span style="color:red" id="subject_error"><?php echo $subject_err; ?></span>
+                                <input type="text" class="form-control" placeholder="Subject" name="subject" id="subject" data-error="Subject is required." value="<?php echo $subject;?>" >
+                            <div class="help-block with-errors"></div>
+                            </div>
+                           
+                             <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label for="txtmsg">Message *</label> <span style="color:red" id="msg_error"><?php echo $msg_err; ?></span>
+                                        <textarea id="txtmsg" name="txtmsg" class="form-control" placeholder="Message for me" rows="4"  data-error="Please,leave us a message."><?php echo $message;?></textarea>
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3">
+                            <button type="submit" id="networkingsubmit" name="networkingsubmit" class="btn" value="Send message">
+                                <span>SEND</span>
+                                </div>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- ======= Support center ======= -->
+        <section class="support-center">
+            <div class="container">
+                <div class="title main-heading-content">
+                    <h2>Support <span>Center</span></h2>
+                    <p class="p-l">
+                        Our professional support is always ready to support the customers if they face any issues.</p>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6 col-lg-3 m-b-tab-30">
+                        <div class="block">
+                            <img src="images/contact/letter.png" alt="" class="img-responsive">
+                            <div class="text">
+                                <p class="p-l main-color2"><b>Email Support</b></p>
+                                <p>
+                                    Our professional support is always ready to chat with you..
+                                </p>
+                                <a href="#" class="btn">SEND EMAIL<i class="icon ion-arrow-right-c"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-3 m-b-tab-30">
+                        <div class="block">
+                            <img src="images/contact/telemarketer.png" alt="" class="img-responsive">
+                            <div class="text">
+                                <p class="p-l main-color2"><b>Call Center</b></p>
+                                <p>
+                                    Our professional support is always ready to answer all your questions.    </p>
+                                <a href="#" class="btn">CALL CENTER<i class="icon ion-arrow-right-c"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-3">
+                        <div class="block">
+                            <img src="images/contact/tickets.png" alt="" class="img-responsive">
+                            <div class="text">
+                                <p class="p-l main-color2"><b>Support Ticket</b></p>
+                                <p>
+                                    Our Support team is ready to answer the ticket raised by the customers. </p>
+                                <a href="#" class="btn">SUBMIT A TICKET<i class="icon ion-arrow-right-c"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-3">
+                        <div class="block m-b-mob-0">
+                            <img src="images/contact/dialog.png" alt="" class="img-responsive">
+                            <div class="text">
+                                <p class="p-l main-color2"><b>Live Chat</b></p>
+                                <p>
+                                    Our support team is always ready to answer the questions .  </p>
+                                <a href="#" class="btn">START CHAT<i class="icon ion-arrow-right-c"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- ======= Google Maps ======= -->
+    <!--    <section class="google-maps">
+            <div class="container-fluid">
+                <div class="title">
+                    <h2>Address<span>Map</span></h2>
+                   <!--- <p class="p-l">
+                        Consectetuer donec aliquam sit, mauris imperdiet. Praesent taciti eget, ultricies nulla nec quo sociis cras
+                    </p>
+                </div>
+                <div class="row">
+                    <div id="googleMap" style="width:100%;height:400px;">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>--->
+    <!-- ======= Guaratess ======= -->
+    <!--<div class="guaratess">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-3 guarate m-b-mob-30">
+                    <img src="images/guaratess/guaratess-1.png" alt="">
+                    <p>24/7/365 Support</p>
+                </div>
+                <div class="col-sm-3 guarate m-b-mob-30">
+                    <img src="images/guaratess/guaratess-2.png" alt="">
+                    <p>45 Day Guarantee</p>
+                </div>
+                <div class="col-sm-3 guarate m-b-mob-30">
+                    <img src="images/guaratess/guaratess-3.png" alt="">
+                    <p>99.9% Uptime</p>
+                </div>
+                <div class="col-sm-3 guarate">
+                    <img src="images/guaratess/guaratess-4.png" alt="">
+                    <p>World Class Hosting</p>
+                </div>
+            </div>
+        </div>
+    </div>-->
+  <!-- ======= Footer ======= -->
+    <section class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6 col-lg-4 m-b-mob-30 m-b-tab-30">
+                    <h4 class="footer-title">About Us</h4>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sollicitudin ultrices suscipit. Sed commodo vel mauris vel dapibus. Lorem ipsum dolor sit amet.
+                    </p>
+                    <ul class="list-unstyled list-inline footer-social">
+                        <li><a href="#" class="facebook"><i class="icon ion-social-facebook"></i></a></li>
+                        <li><a href="#" class="twitter"><i class="icon ion-social-twitter"></i></a></li>
+                        <li><a href="#" class="googleplus"><i class="icon ion-social-googleplus"></i></a></li>
+                        <li><a href="#" class="pinterest"><i class="icon ion-social-pinterest"></i></a></li>
+                        <li><a href="#" class="dribbble"><i class="icon ion-social-dribbble-outline"></i></a></li>
+                        <li><a href="#" class="tumblr"><i class="icon ion-social-tumblr"></i></a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-6 col-lg-4 m-b-mob-30 m-b-tab-30">
+                    <h4 class="footer-title">Useful Links</h4>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                       <!-- <li><a href="blog.html">Blog</a></li>-->
+                        <li><a href="portfolio.html">Portfolio</a></li>
+                        <li><a href="contact.html" class="no-border">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-6 col-lg-4 m-b-mob-30">
+                    <h4 class="footer-title">Our Services</h4>
+                    <ul class="list-unstyled">
+                         <li><a href="server.html">Server Administration</a></li>
+                            <li><a href="networkservices.html">Network Services</a></li>
+                           <!-- <li><a href="firewall.html"></a></li> -->
+                            <li><a href="networksecurity.html">Network  Security</a></li>
+                            <li><a href="surveillance.html">Surveillances</a></li>
+                          <!--  <li><a href="NetworkSecurity.html">Access Control Systems</a></li>-->
+                            <li><a href="itsupport.html">IT Support </a></li>
+                            <li><a href="uninterrupted.html">UPS</a></li>
+                    </ul>
+                </div>
+             <!--   <div class="col-sm-6 col-lg-3">
+                    <h4 class="footer-title">News Letter</h4>
+                    <p>Lorem ipsum dolor sit amet</p>
+                    <form method="post">
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="subscribe-name" placeholder="Name">
+                        </div>
+                        <div class="form-group">
+                            <input type="email" class="form-control email" id="subscribe-email" placeholder="Email">
+                        </div>
+                        <button type="submit" class="btn">SUBSCRIBE</button>
+                    </form>
+                </div>--->
+            </div>
+        </div>
+    </section>
+    <!-- ======= Copyrights ======= -->
+    <div class="copyright">
+        <div class="container">
+            <p>Copyright 2019 <a href="index.html" class="main-color">MRIT</a> | All Rights Reserved</p>
+            <a role="button" class="main-color up">Back to Up<img src="images/up.png" alt=""></a>
+        </div>
+    </div>
+    <!-- ======= Scripts ======= -->
+    <script src="js/jquery-1.12.3.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="http://maps.google.com/maps/api/js?sensor=true"></script>
+    <script src="js/jquery.gmap.min.js"></script>
+    <script src="js/isotope.pkgd.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/functions.js"></script>
+</body>
+</html>
+<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>-->
+<script>
+ function validate_contact()
+  {
+	 
+	  if($("#name").val()=="")
+        {$("#name_error").html("Required").focus();var error="yes";}
+		else
+		{$("#name_error").html("&nbsp;");}
+	
+	 if($("#email").val()=="")
+        {$("#email_error").html("Required").focus();var error="yes";}
+		else
+		{$("#email_error").html("&nbsp;");}
+        
+        if($("#subject").val()=="")
+            {$("#subject_error").html("Required").focus();var error="yes";}
+            else
+               {$("#subject_error").html("&nbsp");}
+          if($("#txtmsg").val()=="")
+        {$("#msg_error").html("Required").focus();var error="yes";}
+        else{$("#msg_error").html("&nbsp;");}
+	    if(error=='yes')
+        {
+            return false;
+        } 
+        else
+		{
+            return true;
+        }
+ }
+
+</script>
